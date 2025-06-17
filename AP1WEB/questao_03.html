@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Viewer</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="pokemonImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Pokémon">
+    <div>
+        <button id="prevButton">Voltar -1</button>
+        <button id="nextButton">Adiantar +1</button>
+    </div>
+
+    <script>
+        const pokemonImage = document.getElementById('pokemonImage');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        let currentPokemonId = 1;
+
+        const updatePokemonImage = (newId) => {
+            if (newId > 0 && newId <= 100) {
+                currentPokemonId = newId;
+                pokemonImage.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${currentPokemonId}.svg`;
+            }
+        };
+
+        prevButton.addEventListener('click', () => {
+            updatePokemonImage(currentPokemonId - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            updatePokemonImage(currentPokemonId + 1);
+        });
+    </script>
+</body>
+</html>
