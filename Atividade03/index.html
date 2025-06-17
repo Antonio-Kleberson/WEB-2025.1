@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Solar</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --nav-bg: #f0f0f0;
+      --nav-text: #333333;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+      --nav-bg: #1f1f1f;
+      --nav-text: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: var(--nav-bg);
+      color: var(--nav-text);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: var(--nav-text);
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    article {
+      margin-bottom: 2rem;
+    }
+
+    .toggle-dark {
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid var(--nav-text);
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: var(--nav-text);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--nav-text);
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    .planetas-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .planeta {
+      flex: 1 1 250px;
+      background-color: var(--nav-bg);
+      color: var(--nav-text);
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .planeta img {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Sistema Solar</h1>
+    <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="menu">
+        <li><a href="#sol">Sol</a></li>
+        <li><a href="#planetas">Planetas</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+      </ul>
+    </nav>
+    <button class="toggle-dark" onclick="toggleDarkMode()">Modo Escuro</button>
+  </header>
+
+  <main>
+    <article id="sol">
+      <h2>O Sol</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg" alt="Imagem do Sol" style="max-width: 200px; display: block; margin: 10px auto;">
+      <p>O Sol é uma estrela de classe espectral G2V localizada no centro do sistema solar. Responsável por mais de 99,8% da massa total do sistema, ele é uma gigantesca esfera de gás composta principalmente por hidrogênio (cerca de 74%) e hélio (24%). Sua energia é produzida por fusão nuclear em seu núcleo, onde átomos de hidrogênio se fundem para formar hélio, liberando luz e calor. Essa energia sustenta a vida na Terra, influencia o clima, os oceanos e as estações. O Sol tem cerca de 4,6 bilhões de anos e está atualmente na metade de sua vida como estrela da sequência principal.</p>
+    </article>    
+
+    <section id="planetas">
+      <h2>Planetas do Sistema Solar</h2>
+      <div class="planetas-container">
+        <div class="planeta">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="Mercúrio">
+          <h3>Mercúrio</h3>
+          <p>Mercúrio é o planeta mais próximo do Sol e o menor do sistema solar. Sua superfície é semelhante à da Lua, com muitas crateras. Ele não possui atmosfera significativa e tem temperaturas extremas.</p>
+        </div>
+        <div class="planeta">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg" alt="Vênus">
+          <h3>Vênus</h3>
+          <p>Vênus é conhecido por sua densa atmosfera de dióxido de carbono e nuvens de ácido sulfúrico. Sua temperatura superficial é altíssima, sendo o planeta mais quente do sistema solar.</p>
+        </div>
+        <div class="planeta">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg" alt="Terra">
+          <h3>Terra</h3>
+          <p>A Terra é o único planeta conhecido que abriga vida. Possui atmosfera rica em oxigênio, água em estado líquido e uma biosfera complexa. É o terceiro planeta a partir do Sol.</p>
+        </div>
+        <div class="planeta">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Marte">
+          <h3>Marte</h3>
+          <p>Marte é conhecido como o planeta vermelho devido ao óxido de ferro em sua superfície. Tem calotas polares de gelo e é alvo de pesquisas sobre a possibilidade de vida passada.</p>
+        </div>
+        <div class="planeta">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Júpiter">
+          <h3>Júpiter</h3>
+          <p>Júpiter é o maior planeta do sistema solar. Composto principalmente por hidrogênio e hélio, possui uma Grande Mancha Vermelha, que é uma tempestade gigante persistente há séculos.</p>
+        </div>
+        <div class="planeta">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturno">
+          <h3>Saturno</h3>
+          <p>Saturno é famoso por seus anéis compostos de gelo e rochas. É um gigante gasoso com dezenas de luas, incluindo Titã, que possui uma atmosfera densa e mares de metano líquido.</p>
+        </div>
+        <div class="planeta">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Urano">
+          <h3>Urano</h3>
+          <p>Urano tem uma rotação inclinada quase horizontal, tornando-o único entre os planetas. É um gigante gasoso com coloração azulada devido ao metano em sua atmosfera.</p>
+        </div>
+        <div class="planeta">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" alt="Netuno">
+          <h3>Netuno</h3>
+          <p>Netuno é o planeta mais distante do Sol. Possui ventos fortíssimos e uma coloração azul intensa, também causada pelo metano em sua atmosfera. É semelhante a Urano em composição.</p>
+        </div>
+      </div>
+    </section>
+
+    <aside id="curiosidades">
+      <h2>Curiosidades</h2>
+      <p>Você sabia que a luz do Sol leva cerca de 8 minutos e 20 segundos para chegar até a Terra?</p>
+      <p>Júpiter tem pelo menos 92 luas conhecidas, sendo Ganimedes a maior delas e maior que o planeta Mercúrio.</p>
+      <p>Vênus gira em sentido oposto ao da maioria dos planetas, e um dia lá dura mais que um ano venusiano.</p>
+      <p>Urano "rola" em sua órbita devido à sua inclinação axial extrema de 98 graus.</p>
+      <p>Saturno poderia flutuar em uma banheira gigante de água, pois sua densidade média é menor que a da água.</p>
+      <p>O maior vulcão do sistema solar está em Marte e se chama Olympus Mons. Ele é três vezes mais alto que o Monte Everest.</p>
+      <p>Netuno tem os ventos mais rápidos do sistema solar, que podem ultrapassar 2.000 km/h.</p>
+      <p>O cinturão de asteroides entre Marte e Júpiter é tão esparso que uma espaçonave pode atravessá-lo sem colidir com nenhum objeto.</p>
+      <p>Mercúrio não possui atmosfera significativa, o que faz com que suas temperaturas variem drasticamente entre o dia e a noite.</p>
+      <p>A Terra é o único planeta com placas tectônicas ativas conhecidas.</p>
+      <p>As estações do ano em Marte duram quase o dobro do tempo das da Terra, devido à sua órbita mais alongada.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p style="text-align: center; padding: 20px;">&copy; 2025 - Sistema Solar Educacional</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+
+</html>
