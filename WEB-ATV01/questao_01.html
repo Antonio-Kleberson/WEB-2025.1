@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        nav {
+            background-color: #f4f4f4;
+            flex: 30%;
+            padding: 20px;
+        }
+        
+        nav a {
+            display: block;
+            margin: 10px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        
+        article {
+            background-color: #e8e8e8;
+            flex: 70%;
+            padding: 20px;
+        }
+        
+        p {
+            line-height: 1.6;
+            color: #555;
+            margin: 10px 0;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: #333;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        
+        img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border: 5px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+        
+        @media (max-width: 400px) {
+            section {
+                flex-direction: column;
+            }
+        
+            nav {
+                flex: 100%;
+            }
+        
+            article {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Desenvolvimento de Software WEB</h2>
+      </header>
+      
+      <section>
+        <nav>
+            <h4>[Menu Lateral]</h4>
+            <a href="https://pt.wikipedia.org/wiki/Inglaterra">Referencias</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </nav>
+        
+        <article>
+            <h4>[Conteúdo]</h4>
+            <h1>Curiosidades sobre a Inglaterra</h1>
+            <p>A Inglaterra é uma das nações mais influentes do mundo, com uma história rica, uma cultura 
+                marcante e um legado que ultrapassa séculos. Localizada na ilha da Grã-Bretanha, faz parte 
+                do Reino Unido e tem Londres como sua capital.</p>
+            <img src="/img/img1.jpg" alt="Bandeira do Reino Unido">
+            <p>A cultura da Inglaterra é reconhecida por sua contribuição significativa às artes, à música,
+                à literatura e à moda. Autores como William Shakespeare e Jane Austen moldaram a literatura
+                mundial, enquanto bandas como The Beatles e Queen transformaram a música.</p>
+            <p>Além disso, tradições como o chá das cinco, a pontualidade britânica e o humor peculiar
+                fazem parte do cotidiano inglês. A monarquia também é um dos símbolos culturais mais 
+                emblemáticos, com a família real sendo admirada e seguida por milhões ao redor do mundo.</p>
+            <img src="/img/img2.png" alt="Cultura">
+        </article>
+      </section>
+      
+      <footer>
+        <a href="mailto:klebersonsilva@gmail.com">klebersonsilva@gmail.com</a>
+        <p>2025.1</p>
+        <p>Todos os direitos reservados</p>
+      </footer>
+      
+</body>
+</html>
