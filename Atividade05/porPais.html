@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório COVID-19 - Países</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="./porEstado.html">Ver dados por estado</a>
+        <h1>Relatório COVID-19 por País</h1>
+    </header>
+
+    <main>
+        <section>
+            <table id="tabela-paises">
+                <thead>
+                    <tr>
+                        <th>País</th>
+                        <th>Casos Confirmados</th>
+                        <th>Óbitos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+
+        <aside class="resumo-paises">
+            <h2>Informações Estatísticas</h2>
+            <p id="media-casos-pais"></p>
+            <p id="media-obitos-pais"></p>
+
+            <div class="legenda-relatorio">
+                <h3>Legenda</h3>
+                <ul>
+                    <li><span class="cor destaque-obitos"></span> Países com óbitos acima da média</li>
+                    <li><span class="cor maior-proporcao"></span> Maior relação Casos/Óbitos</li>
+                    <li><span class="cor menor-proporcao"></span> Menor relação Casos/Óbitos</li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <script src="./js/dadosPorPais.js"></script>
+</body>
+
+</html>

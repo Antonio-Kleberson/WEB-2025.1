@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório COVID - Brasil</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="./porPais.html">Ver dados por país</a>
+        <h1>Relatório COVID-19 por Estado Brasileiro</h1>
+    </header>
+
+    <main>
+        <section>
+            <table id="tabela-estados">
+                <thead>
+                    <tr>
+                        <th>Estado</th>
+                        <th>UF</th>
+                        <th>Casos Confirmados</th>
+                        <th>Suspeitos</th>
+                        <th>Óbitos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+
+        <aside class="resumo">
+            <h2>Informações Complementares</h2>
+            <p id="media-casos"></p>
+            <p id="media-suspeitos"></p>
+            <p id="media-obitos"></p>
+
+            <div class="legenda-estatisticas">
+                <h3>Legenda</h3>
+                <ul>
+                    <li><span class="cor destaque-obitos"></span> Estados acima da média de óbitos</li>
+                    <li><span class="cor relacao-maior"></span> Maior proporção Casos/Óbitos</li>
+                    <li><span class="cor relacao-menor"></span> Menor proporção Casos/Óbitos</li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <script src="./js/dadosPorEstado.js"></script>
+</body>
+
+</html>
